@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemical Supplies</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="table-header">
+        <h1>Chemical Supplies</h1>
+
+        <div id="controls">
+            <button id="addRow"><i class="fa-solid fa-circle-plus fa-xl"></i></button>
+            <button id="moveUp"><i class="fa-solid fa-arrow-up fa-xl"></i></button>
+            <button id="moveDown"><i class="fa-solid fa-arrow-down fa-xl"></i></button>
+            <button id="deleteRow"><i class="fa-solid fa-trash fa-xl"></i></button>
+            <button id="refreshData"><i class="fa-solid fa-rotate-left fa-xl"></i></button>
+            <button id="saveToJson"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
+        </div>
+    </div>
+
+    <table id="chemicalTable">
+        <thead>
+            <tr>
+                <th>
+                    <div class="custom-checkbox" onclick="toggleCheckboxAll(this)"><i class="fa-solid fa-check"></i></div>
+                </th>
+                <th onclick="sortTable(0)" class="sortable">ID</th> <!-- New column for ID -->
+                <th onclick="sortTable(1)" class="sortable">Chemical Name</th>
+                <th onclick="sortTable(2)" class="sortable">Vendor</th>
+                <th onclick="sortTable(3)" class="sortable">Density (g/m³)</th>
+                <th onclick="sortTable(4)" class="sortable">Viscosity (m²/s)</th>
+                <th onclick="sortTable(5)" class="sortable">Packaging</th>
+                <th onclick="sortTable(6)" class="sortable">Pack Size</th>
+                <th onclick="sortTable(7)" class="sortable">Unit</th>
+                <th onclick="sortTable(8)" class="sortable">Quantity</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
